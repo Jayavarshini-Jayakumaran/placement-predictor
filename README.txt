@@ -47,7 +47,7 @@ It uses a **Machine Learning model** to analyze patterns and provide predictions
 ---
 
 ## 📸 Demo (Optional)
-*(Add screenshots here to impress recruiters)*
+*(ss)*
 
 ---
 
@@ -62,9 +62,13 @@ It uses a **Machine Learning model** to analyze patterns and provide predictions
 
 ## Run the Project Locally
 
-```bash
+```bash 
 pip install -r requirements.txt
+```
+```bash
 python train_model.py
+```
+```bash
 streamlit run app.py
 ```
 
