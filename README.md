@@ -46,11 +46,6 @@ It uses a **Machine Learning model** to analyze patterns and provide predictions
 
 ---
 
-## 📸 Demo (Optional)
-*(Add screenshots here to impress recruiters)*
-
----
-
 ## 🚀 Future Improvements
 
 - Add more features (resume analysis, coding skills)  
