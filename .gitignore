@@ -4,4 +4,4 @@ __pycache__/
 model.pkl
 scaler.pkl
 *.ipynb_checkpoints/
-.DS_Store
+.DS_Store"plots/" 
