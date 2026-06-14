@@ -85,4 +85,4 @@ python eda.py
 
 📄 **License** — [MIT](LICENSE)
 
-<p align="center"><b>Finish what you started.</b></p>
+<p align="center"><b>Finish what you started 💻 </b></p>
