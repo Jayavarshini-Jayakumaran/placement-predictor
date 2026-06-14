@@ -32,15 +32,13 @@ It covers the full ML workflow: **data preprocessing → exploratory data analys
 
 ```
 .
-├── data.csv                 # Raw dataset
-├── features.py              # Shared feature engineering (used by training + app)
-├── eda.py                    # EDA script -> generates plots/ and eda_report.md
-├── eda.ipynb                  # EDA notebook (same analysis, interactive)
-├── eda_report.md             # Generated EDA summary report
-├── train_model.py             # Preprocessing, training, evaluation
+├── data.csv                  # Raw dataset
+├── features.py               # Shared feature engineering (used by training + app)
+├── eda.py                    # EDA script -> generates plots
+├── eda.ipynb                 # EDA notebook
+├── train_model.py            # Preprocessing, training, evaluation
 ├── app.py                    # Streamlit web app
-├── metrics.txt               # Generated evaluation metrics
-├── plots/                    # All generated charts (EDA + evaluation)
+├── plots/                    # All generated charts
 ├── model.pkl                 # Trained model (generated)
 ├── scaler.pkl                # Fitted StandardScaler (generated)
 └── requirements.txt
