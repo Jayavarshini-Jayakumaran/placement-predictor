@@ -2,3 +2,6 @@ venv/
 __pycache__/
 *.pyc
 model.pkl
+scaler.pkl
+*.ipynb_checkpoints/
+.DS_Store
