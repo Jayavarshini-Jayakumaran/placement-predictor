@@ -1,30 +1,22 @@
-# 🎯 Campus Placement Eligibility Predictor
+# Campus Placement Eligibility Predictor
 
-> *This project is part of my self-learning journey to explore Machine Learning concepts and real-world application development.*
-
----
-
-## Project Overview
-
-This project predicts whether a student is **eligible for campus placement** based on key factors like:
-
-- CGPA
-- Skill Certifications
-- Internships
-- Projects
-
-It covers the full ML workflow: **data preprocessing → exploratory data analysis (EDA) → feature engineering → model training → evaluation → an interactive web app** that gives instant predictions, probability scores, and personalized insights.
+> *Part of my self-learning journey into Machine Learning and real-world app development.*
 
 ---
 
-## ⚙️ Tech Stack
+## What This Project Does
 
-- Python
-- Pandas / NumPy
-- Scikit-learn (Machine Learning)
-- Matplotlib / Seaborn (visualization)
-- Jupyter Notebook (EDA)
-- Streamlit (Web App UI)
+Predicts whether a student is eligible for campus placement based on four inputs — CGPA, skill certifications, internships, and projects — using a trained Machine Learning model with an interactive web app.
+
+---
+
+## Tech Stack
+
+- Python, Pandas, NumPy
+- Scikit-learn — model training & evaluation
+- Matplotlib, Seaborn — visualizations
+- Jupyter Notebook — exploratory analysis
+- Streamlit — web app
 
 ---
 
@@ -32,15 +24,12 @@ It covers the full ML workflow: **data preprocessing → exploratory data analys
 
 ```
 .
-├── data.csv                  # Raw dataset
-├── features.py               # Shared feature engineering (used by training + app)
-├── eda.py                    # EDA script -> generates plots
-├── eda.ipynb                 # EDA notebook
-├── train_model.py            # Preprocessing, training, evaluation
-├── app.py                    # Streamlit web app
-├── plots/                    # All generated charts
-├── model.pkl                 # Trained model (generated)
-├── scaler.pkl                # Fitted StandardScaler (generated)
+├── data.csv          # Dataset
+├── features.py       # Feature engineering (shared by training + app)
+├── eda.py            # EDA script — generates plots
+├── eda.ipynb         # EDA notebook (interactive)
+├── train_model.py    # Preprocessing, training, evaluation
+├── app.py            # Streamlit web app
 └── requirements.txt
 ```
 
@@ -48,82 +37,52 @@ It covers the full ML workflow: **data preprocessing → exploratory data analys
 
 ## How It Works
 
-### 1. Data Preprocessing
-- Checks for and removes duplicate rows
-- Checks for and handles missing values (median imputation, if needed)
-- Scales features with `StandardScaler`
+**1. Data Preprocessing**
+Duplicate removal, missing value handling, and feature scaling with `StandardScaler`.
 
-### 2. Exploratory Data Analysis (EDA)
-Run `python eda.py` (or open `eda.ipynb`) to generate:
-- Class balance (eligible vs not eligible)
-- Distribution plots for CGPA, skills, internships, projects
-- CGPA vs eligibility boxplot
-- Eligibility rate by skills / internships / projects
-- Correlation heatmap
-- Pairwise feature relationships
-- A full written summary in `eda_report.md`
+**2. Exploratory Data Analysis**
+Run `python eda.py` or open `eda.ipynb` to explore class balance, feature distributions, correlation heatmap, eligibility rates, and pairwise relationships.
 
-### 3. Feature Engineering
-Implemented in `features.py` and shared between training and the app:
-- **experience_score** = skills + internships + projects
-- **cgpa_band** = categorical CGPA bucket (Low / Medium / High)
-- **cgpa_experience_interaction** = cgpa × experience_score
+**3. Feature Engineering** — in `features.py`
+- `experience_score` = skills + internships + projects
+- `cgpa_band` = Low / Medium / High bucket
+- `cgpa_experience_interaction` = cgpa × experience_score
 
-### 4. Model Training & Evaluation
-`train_model.py`:
-- Trains a **Random Forest Classifier** on engineered, scaled features
-- Evaluates on a held-out test set using:
-  - Accuracy, Precision, Recall, F1-score, ROC-AUC
-  - Confusion matrix
-  - Classification report
-- Saves evaluation plots (`plots/07_confusion_matrix.png`, `plots/08_feature_importance.png`, `plots/09_roc_curve.png`) and `metrics.txt`
-- Saves the trained `model.pkl` and `scaler.pkl`
+**4. Model Training & Evaluation** — `train_model.py`
+Trains a Random Forest Classifier and evaluates it with accuracy, precision, recall, F1-score, ROC-AUC, confusion matrix, and a classification report.
 
-### 5. Interactive Web App
-`app.py` (Streamlit):
-- Sliders for CGPA, skill certifications, internships, and projects
-- Applies the **same feature engineering** as training
-- Predicts **Eligible / Not Eligible** with a **confidence/probability score**
-- Visual probability bar
-- Personalized insights:
-  - CGPA band
-  - Top features driving the model
-  - Specific suggestions to improve eligibility chances
+**5. Web App** — `app.py`
+Enter your details and instantly get a placement prediction, confidence score, a visual likelihood bar, and personalised suggestions on where to improve.
 
 ---
 
-## Run the Project Locally
+## Run Locally
 
 ```bash
 pip install -r requirements.txt
+python train_model.py
+streamlit run app.py
+```
 
-# 1. Explore the data
+To explore the data first:
+```bash
 python eda.py
 # or open eda.ipynb in Jupyter
-
-# 2. Train and evaluate the model
-python train_model.py
-
-# 3. Launch the web app
-streamlit run app.py
 ```
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
-- Add more features (resume analysis, coding skills, soft skills assessment)
-- Hyperparameter tuning (GridSearchCV / RandomizedSearchCV)
-- Compare multiple models (Logistic Regression, XGBoost, etc.)
-- Deploy online (Streamlit Cloud / AWS)
-- Add a richer interactive dashboard with historical trends
+- Add resume analysis and coding skill inputs
+- Hyperparameter tuning and model comparison
+- Deploy on Streamlit Cloud
+- Interactive data visualization dashboard
 
 ---
 
-## 🙌 Connect with Me
-- LinkedIn: [Jayavarshini Jayakumaran](https://www.linkedin.com/in/jayavarshini-jayakumaran)
+🙌 **Connect** — [LinkedIn: Jayavarshini Jayakumaran](https://www.linkedin.com/in/jayavarshini-jayakumaran)
 
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
+📄 **License** — [MIT](LICENSE)
 
-<p align="center"><b>Finish what you started 💻 </b></p>
+<p align="center"><b>Finish what you started.</b></p>
