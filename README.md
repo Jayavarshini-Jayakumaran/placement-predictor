@@ -6,7 +6,15 @@
 
 ## What This Project Does
 
-Predicts whether a student is eligible for campus placement based on four inputs — CGPA, skill certifications, internships, and projects — using a trained Machine Learning model with an interactive web app.
+Predicts whether a student is eligible for campus placement based on four inputs - CGPA, skill certifications, internships, and projects - using a trained Machine Learning model with an interactive web app.
+
+---
+
+## Application Preview
+
+<p align="center">
+  <img src="assets/ui.png" alt="Campus Placement Predictor UI" width="800">
+</p>
 
 ---
 
@@ -69,15 +77,6 @@ To explore the data first:
 python eda.py
 # or open eda.ipynb in Jupyter
 ```
-
----
-
-## Future Improvements
-
-- Add resume analysis and coding skill inputs
-- Hyperparameter tuning and model comparison
-- Deploy on Streamlit Cloud
-- Interactive data visualization dashboard
 
 ---
 

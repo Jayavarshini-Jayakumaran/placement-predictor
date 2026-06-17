@@ -6,3 +6,6 @@ scaler.pkl
 .ipynb_checkpoints/
 .DS_Store
 plots/
+assets/Placement Predictor - Input.png
+assets/Placement Predictor - Result.png
+assets/Placement Predictor - Suggestion.png
