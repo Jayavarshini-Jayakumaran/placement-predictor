@@ -1,13 +1,3 @@
-"""
-features.py
-------------
-Shared feature-engineering logic.
-
-Keeping this in one place ensures that the exact same transformations
-used during training are also applied at prediction time inside the
-Streamlit app (this avoids "training/serving skew").
-"""
-
 import pandas as pd
 
 
@@ -50,7 +40,7 @@ def add_engineered_features(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# The final, ordered list of feature columns fed into the model.
+# The final list of feature columns fed into the model.
 FEATURE_COLUMNS = [
     "cgpa",
     "skills",

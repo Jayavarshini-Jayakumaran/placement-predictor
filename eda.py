@@ -1,13 +1,3 @@
-"""
-eda.py
-------
-Exploratory Data Analysis for the Campus Placement Eligibility dataset.
-Generates plots saved to the `plots/` folder.
-
-Run with:
-    python eda.py
-"""
-
 import os
 import pandas as pd
 import matplotlib.pyplot as plt

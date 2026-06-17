@@ -1,7 +1,3 @@
-"""
-app.py — Campus Placement Eligibility Predictor
-"""
-
 import joblib
 import pandas as pd
 import streamlit as st
@@ -276,7 +272,7 @@ if predict_clicked:
                 va="center", fontweight="bold", color=TEXT_DARK)
         st.pyplot(fig)
 
-        # ── Personalised insights ──────────────────────────────────
+        # Personalised insights
         st.markdown("---")
         section_heading("idea", "Suggestions for You")
 

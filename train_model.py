@@ -1,22 +1,3 @@
-"""
-train_model.py
----------------
-Trains the Campus Placement Eligibility model end-to-end:
-
-1. Data preprocessing  (missing value / duplicate checks, scaling)
-2. Feature engineering (experience_score, cgpa_band, interaction term)
-3. Train/test split
-4. Model training       (RandomForestClassifier)
-5. Evaluation           (accuracy, precision, recall, F1,
-                          confusion matrix, ROC-AUC, classification report)
-6. Artifacts saved:
-       - model.pkl      trained model
-       - scaler.pkl     fitted StandardScaler
-
-Run with:
-    python train_model.py
-"""
-
 import pandas as pd
 import joblib
 
